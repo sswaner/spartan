@@ -3,4 +3,4 @@ boto3>=1.26.123
 gunicorn>=20.1.0
 authlib>=1.0
 requests>=2.27.1
-python-dotenv>=1.0.0
+python-dotenv
