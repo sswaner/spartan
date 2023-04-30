@@ -11,6 +11,14 @@
         <a href="{{ url_for('self_service') }}">Self-Service</a>
         <a href="{{ url_for('products') }}">Products</a>
     </nav>
+    {% if session %}
+    <h1>Welcome {{session.userinfo.name}}!</h1>
+    <p><a href="/logout">Logout</a></p>
+    <div><pre>{{pretty}}</pre></div>
+{% else %}
+  <h1>Welcome Guest</h1>
+  <p><a href="/login">Login</a></p>
+{% endif %}
     <img src="{{ url_for('static', filename='images/Abby1.jpg') }}" alt="Example Image">
     <h2>v0.3</h2>
 </body>
